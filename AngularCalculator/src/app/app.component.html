@@ -1,0 +1,59 @@
+<div class="calculator" [ngClass]="{'dark-mode-calculator': isDarkMode, 'light-mode-calculator': !isDarkMode}">
+  <div class="dark-mode-toggle" style="display: inline-block;">
+    <button class="mode-toggle" (click)="toggleMode()">
+      <span *ngIf="isDarkMode; else sunIcon"><i class="fas fa-moon"></i></span>
+      <!-- FontAwesome icon -->
+      <ng-template #sunIcon><i class="fas fa-sun"></i></ng-template>
+    </button>
+  </div>
+  <div class="history-toggle" style="display: inline-block;">
+    <button class="toggle-history" (click)="toggleHistory()">
+      <i class="fas fa-history"></i>
+    </button>
+  </div>
+  <div class="input-row">
+    <input type="text" class="result" [(ngModel)]="input" readonly>
+    <input type="text" class="result" style="font-size: 37px;" [(ngModel)]="result" readonly>
+  </div>
+<div [ngClass]="{'dark-mode': isDarkMode, 'light-mode': !isDarkMode}" style="margin: -20px !important; padding: 0 !important; border-radius: 20px !important;">
+    <div class="buttons">
+      <div class="button-row">
+        <button class="clear" (click)="clear()">AC</button>
+        <button (click)="toggleSign()">+/-</button>
+        <button (click)="appendToInput('%')">%</button>
+        <button class="operator" (click)="appendToInput('/')">÷</button>
+      </div>
+      <div class="button-row">
+        <button (click)="appendToInput('7')">7</button>
+        <button (click)="appendToInput('8')">8</button>
+        <button (click)="appendToInput('9')">9</button>
+        <button class="operator" (click)="appendToInput('*')">*</button>
+      </div>
+      <div class="button-row">
+        <button (click)="appendToInput('4')">4</button>
+        <button (click)="appendToInput('5')">5</button>
+        <button (click)="appendToInput('6')">6</button>
+        <button class="operator" (click)="appendToInput('-')">-</button>
+      </div>
+      <div class="button-row">
+        <button (click)="appendToInput('1')">1</button>
+        <button (click)="appendToInput('2')">2</button>
+        <button (click)="appendToInput('3')">3</button>
+        <button class="operator" (click)="appendToInput('+')">+</button>
+      </div>
+      <div class="button-row">
+        <button class="zero" (click)="appendToInput('.')">.</button>
+        <button class="zero" (click)="appendToInput('0')">0</button>
+        <button class="zero" (click)="appendToInput('00')">00</button>
+        <button class="calculate" (click)="calculate()">=</button>
+      </div>
+    </div>
+    <div *ngIf="showHistory" class="history">
+      <h3>History</h3>
+      <ul>
+        <li *ngFor="let item of history">{{ item }}</li>
+      </ul>
+      <button class="clear-history" (click)="clearHistory()">Clear History</button>
+    </div>
+  </div>
+</div>

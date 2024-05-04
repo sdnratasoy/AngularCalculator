@@ -1,0 +1,138 @@
+.calculator {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-mode {
+    background: linear-gradient(244.38deg, #42869B 8.14%, #2A7DA1 27.9%, #224E91 56.94%, #00123F 84.11%);
+  }
+
+  .light-mode {
+    background: linear-gradient(244.38deg, #9EE8FF 8.14%, #5ACEFF 27.9%, #79AFFF 56.94%, #2D5FDE 84.11%);
+  }
+  
+  .input-row,
+  .result {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .input-row input,
+  .result input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  .input-row input {
+    background-color: transparent; /* Arka planı tamamen şeffaf yap */
+    text-align: right; /* Metni sağa hizala */
+  }
+  
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    height: 50px;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 50px;
+  }
+  
+  .clear,
+  .calculate {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .operator {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .zero {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .dark-mode button {
+    background: #0505054D;
+    color: #fff;
+  }
+  
+  .history {
+    margin-top: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .history h3 {
+    color: #555;
+  }
+  
+  .history ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .history li {
+    margin-bottom: 5px;
+  }
+  
+  .history .clear-history {
+    margin-top: 10px;
+  }
+  
+  .dark-mode-toggle {
+    position:relative;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0) !important; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .history-toggle {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0) !important; 
+    right: 10px;
+    z-index: 1;
+  }
+
+  .dark-mode-calculator{
+    background: linear-gradient(166.34deg, #373737 0%, #252628 22.9%, #000309 100%);
+  }
+
+  .light-mode-calculator{
+    background: linear-gradient(166.34deg, #FEFEFE 0%, #F9F9F9 12.84%, #F3F3F3 32.53%, #E5E5E5 100%);
+  }
+  
