@@ -12,8 +12,8 @@
     </button>
   </div>
   <div class="input-row">
-    <input type="text" class="result" [(ngModel)]="input" readonly>
-    <input type="text" class="result" style="font-size: 37px;" [(ngModel)]="result" readonly>
+    <input type="text" class="result" [ngClass]="{'dark-text': isDarkMode, 'light-text': !isDarkMode}" [(ngModel)]="input" readonly>
+    <input type="text" class="result" [ngClass]="{'dark-text': isDarkMode, 'light-text': !isDarkMode}" style="font-size: 37px;" [(ngModel)]="result" readonly>
   </div>
 <div [ngClass]="{'dark-mode': isDarkMode, 'light-mode': !isDarkMode}" style="margin: -20px !important; padding: 0 !important; border-radius: 20px !important;">
     <div class="buttons">

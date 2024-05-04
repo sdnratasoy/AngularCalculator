@@ -135,4 +135,12 @@
   .light-mode-calculator{
     background: linear-gradient(166.34deg, #FEFEFE 0%, #F9F9F9 12.84%, #F3F3F3 32.53%, #E5E5E5 100%);
   }
+
+  .dark-text{
+    color: #fff;
+    
+  }
+  .light-text{
+    color: #000;
+  }
   
